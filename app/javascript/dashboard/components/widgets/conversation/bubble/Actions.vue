@@ -11,7 +11,7 @@
     </span>
     <span v-if="externalError" class="read-indicator-wrap">
       <fluent-icon
-        v-tooltip.top-start="externalError"
+        v-tooltip.left="externalError"
         icon="error-circle"
         class="action--icon"
         size="14"
@@ -19,7 +19,7 @@
     </span>
     <span v-if="showReadIndicator" class="read-indicator-wrap">
       <fluent-icon
-        v-tooltip.top-start="$t('CHAT_LIST.MESSAGE_READ')"
+        v-tooltip.left="$t('CHAT_LIST.MESSAGE_READ')"
         icon="checkmark-double"
         class="action--icon read-tick read-indicator"
         size="14"
@@ -27,7 +27,7 @@
     </span>
     <span v-else-if="showDeliveredIndicator" class="read-indicator-wrap">
       <fluent-icon
-        v-tooltip.top-start="$t('CHAT_LIST.DELIVERED')"
+        v-tooltip.left="$t('CHAT_LIST.DELIVERED')"
         icon="checkmark-double"
         class="action--icon read-tick"
         size="14"
@@ -35,7 +35,7 @@
     </span>
     <span v-else-if="showSentIndicator" class="read-indicator-wrap">
       <fluent-icon
-        v-tooltip.top-start="$t('CHAT_LIST.SENT')"
+        v-tooltip.left="$t('CHAT_LIST.SENT')"
         icon="checkmark"
         class="action--icon read-tick"
         size="14"
@@ -43,14 +43,14 @@
     </span>
     <fluent-icon
       v-if="isEmail"
-      v-tooltip.top-start="$t('CHAT_LIST.RECEIVED_VIA_EMAIL')"
+      v-tooltip.left="$t('CHAT_LIST.RECEIVED_VIA_EMAIL')"
       icon="mail"
       class="action--icon"
       size="16"
     />
     <fluent-icon
       v-if="isPrivate"
-      v-tooltip.top-start="$t('CONVERSATION.VISIBLE_TO_AGENTS')"
+      v-tooltip.left="$t('CONVERSATION.VISIBLE_TO_AGENTS')"
       icon="lock-closed"
       class="action--icon lock--icon--private"
       size="16"
@@ -64,7 +64,7 @@
       rel="noopener noreferrer nofollow"
     >
       <fluent-icon
-        v-tooltip.top-start="$t('CHAT_LIST.VIEW_TWEET_IN_TWITTER')"
+        v-tooltip.left="$t('CHAT_LIST.VIEW_TWEET_IN_TWITTER')"
         icon="open"
         class="cursor-pointer action--icon"
         size="16"
@@ -262,14 +262,14 @@ export default {
   .message-text--metadata {
     @apply items-center;
     .time {
-      @apply text-woot-100 dark:text-woot-100;
+      @apply text-woot-800 dark:text-woot-100;
     }
 
     .action--icon {
-      @apply text-white dark:text-white;
+      @apply text-slate-500 dark:text-woot-100;
 
       &.read-tick {
-        @apply text-violet-100 dark:text-violet-100;
+        @apply text-slate-500 dark:text-woot-100;
       }
 
       &.read-indicator {
@@ -336,7 +336,7 @@ export default {
     @apply items-center;
 
     .time {
-      @apply text-slate-400 dark:text-slate-400;
+      @apply text-yellow-800 dark:text-yellow-100;
     }
 
     .icon {
